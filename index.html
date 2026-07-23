@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>やすみ (yasumi)</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/simple-icons-font@v13/font/simple-icons.min.css"
+    />
+
+    <style>
+      header img {
+        width: 100%;
+        max-height: 260px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .profile {
+        text-align: center;
+      }
+
+      .language {
+        text-align: right;
+        font-size: 0.85rem;
+      }
+
+      .sns-icons {
+        display: flex;
+        justify-content: center;
+        gap: 1.2rem;
+        margin: 1rem 0;
+      }
+
+      .sns-icons a {
+        font-size: 1.8rem;
+        color: inherit;
+      }
+
+      .sns-icons a:hover {
+        opacity: 0.6;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1rem;
+      }
+
+      .gallery img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .gallery a:hover img {
+        opacity: 0.75;
+      }
+
+      small {
+        color: #118511;
+      }
+
+      :root {
+        --bg-color: #f5f5dc;
+        --text-color: #118511;
+      }
+
+      /* 全体 */
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+      }
+
+      /* リンク */
+
+      a {
+        color: var(--text-color);
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #d94f40;
+      }
+
+      /* ヘッダー */
+
+      header img {
+        width: 100%;
+        max-height: 260px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .profile h3 {
+        color: var(--main-color);
+      }
+
+      /* 言語切替 */
+
+      .language a {
+        font-size: 0.85rem;
+      }
+
+      /* SNS */
+
+      .sns-icons a {
+        font-size: 1.8rem;
+        color: #118511;
+      }
+
+      .sns-icons a:hover {
+        color: var(--main-color);
+      }
+
+      /* 見出し */
+
+      section H5 {
+        color: var(--text-color);
+      }
+
+      /* 作品ギャラリー */
+
+      .gallery {
+        display: grid;
+
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+
+        gap: 1rem;
+      }
+
+      .gallery img {
+        width: 100%;
+
+        aspect-ratio: 1/1;
+
+        object-fit: cover;
+
+        border-radius: 8px;
+
+        transition: 0.2s;
+      }
+
+      .gallery img:hover {
+        transform: translateY(-3px);
+      }
+
+      /* イベント */
+
+      .event-box {
+        background: #f5f5dc;
+
+        padding: 1rem;
+
+        border-radius: 10px;
+      }
+
+      footer {
+        color: #80cb80;
+      }
+      summary {
+        color: #fd6b5b;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="container">
+      <!-- 言語切替 -->
+
+      <div class="language">
+        <a href="index.html"> 日本語 </a>
+
+        &nbsp;|&nbsp;
+
+        <a href="en/index.html"> English </a>
+      </div>
+
+      <header>
+        <div class="profile">
+          <h3>やすみ (yasumi)</h3>
+
+          <p>
+            他のSNSへの案内<br />
+            いつもBlueskyにいます
+          </p>
+        </div>
+
+        <!-- SNS -->
+
+        <nav class="sns-icons">
+          <a href="https://x.com/ysm_flop" aria-label="X">
+            <i class="si si-x"></i>
+          </a>
+
+          <a
+            href="https://bsky.app/profile/ysmflop.bsky.social"
+            aria-label="Bluesky"
+          >
+            <i class="si si-bluesky"></i>
+          </a>
+
+          <a href="https://www.pixiv.net/users/48769" aria-label="pixiv">
+            <i class="si si-pixiv"></i>
+          </a>
+
+          <a href="https://ysmflop.tumblr.com/" aria-label="Tumblr">
+            <i class="si si-tumblr"></i>
+          </a>
+        </nav>
+      </header>
+
+      <!-- 作品一覧 -->
+
+      <section>
+        <h5>作品一覧</h5>
+
+        <table>
+          <thead>
+            <tr>
+              <th>発行日</th>
+              <th>タイトル</th>
+              <th>在庫</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>2026/6/28</td>
+              <td><a href="#">可愛いって言え！</a></td>
+              <td>◎</td>
+            </tr>
+
+            <tr>
+              <td>2026/2/8</td>
+              <td><a href="#">ふたりだけのアンコール</a></td>
+              <td>◎</td>
+            </tr>
+
+            <tr>
+              <td>2025/12/30</td>
+              <td><a href="#">1にちかぎりのひとりじめ</a></td>
+              <td>△</td>
+            </tr>
+
+            <tr>
+              <td>2025/8/16</td>
+              <td><a href="#">プリンセス・オブ・ザ・プラネット</a></td>
+              <td>○</td>
+            </tr>
+
+            <tr>
+              <td>2025/6/15</td>
+              <td><a href="#">バズ・デート・レース</a></td>
+              <td>△</td>
+            </tr>
+
+            <tr>
+              <td>2025/3/30</td>
+              <td><a href="#">ゼロになるまで</a></td>
+              <td>△</td>
+            </tr>
+
+            <tr>
+              <td>2024/12/29</td>
+              <td><a href="#">さよならのつづきのつづき</a></td>
+              <td>✕</td>
+            </tr>
+
+            <tr>
+              <td>2024/10/20</td>
+              <td><a href="#">ヘイ、マイフレンド。</a></td>
+              <td>○</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <!-- 通販 -->
+
+      <section>
+        <h5>通販</h5>
+
+        <ul>
+          <li>
+            <a href="#"> メロンブックス </a>
+          </li>
+        </ul>
+      </section>
+      <!-- イベント -->
+
+      <section>
+        <h5>イベント参加予定</h5>
+
+        <ul>
+          <li>2026/08/15 コミックマーケット108(東3フ04a)</li>
+        </ul>
+      </section>
+
+      <!-- 好きなもの -->
+
+      <section>
+        <h5>好きなもの</h5>
+
+        <details>
+          <summary>ウマ娘</summary>
+
+          <p>
+            推し：ジャングルポケットさん<br />
+            カプはポケタキ相手固定<br />
+            フジマサマーチ、カルストンライトオも好きです<br />
+            望月ゆみこさんの現場によく行きます
+          </p>
+        </details>
+
+        <details>
+          <summary>プリティーシリーズ</summary>
+
+          <p>
+            推し：ミミー、なる店長、プリチャンのめが姉ぇ、阿世知今日子<br />
+            カプ：なるめが
+          </p>
+        </details>
+
+        <details>
+          <summary>逆転バリバリバース</summary>
+
+          <p>
+            推し：コアミン<br />
+            今のところカップリングなし
+          </p>
+        </details>
+      </section>
+
+      <footer>
+        <hr />
+
+        <small> © yasumi </small>
+      </footer>
+    </main>
+  </body>
+</html>
