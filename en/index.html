@@ -1,51 +1,351 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>yasumi</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v13/font/simple-icons.min.css">
-<style>
-:root{--bg-color:#f5f5dc;--text-color:#118511;}
-body{background:var(--bg-color);color:var(--text-color);}
-a{color:var(--text-color);text-decoration:none}
-a:hover{color:#d94f40}
-.profile{text-align:center}.language{text-align:right;font-size:.85rem}
-.sns-icons{display:flex;justify-content:center;gap:1.2rem;margin:1rem 0}
-.sns-icons a{font-size:1.8rem}
-small{color:#118511}summary{color:#fd6b5b;font-weight:bold;cursor:pointer}
-</style>
-</head>
-<body><main class="container">
-<div class="language"><a href="../index.html">日本語</a>&nbsp;|&nbsp;<strong>English</strong></div>
-<header><div class="profile">
-<h3>yasumi</h3>
-<p>Links to my social media.<br>I am usually active on Bluesky.</p>
-</div>
-<nav class="sns-icons">
-<a href="https://x.com/ysm_flop" aria-label="X"><i class="si si-x"></i></a>
-<a href="https://bsky.app/profile/ysmflop.bsky.social" aria-label="Bluesky"><i class="si si-bluesky"></i></a>
-<a href="https://www.pixiv.net/users/48769" aria-label="Pixiv"><i class="si si-pixiv"></i></a>
-<a href="https://ysmflop.tumblr.com/" aria-label="Tumblr"><i class="si si-tumblr"></i></a>
-</nav></header>
-<section><h5>Books</h5>
-<table><thead><tr><th>Date</th><th>Title</th><th>Stock</th></tr></thead><tbody>
-<tr><td>2026/6/28</td><td><a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=3701698">Say I'm Cute!</a></td><td>In Stock</td></tr>
-<tr><td>2026/2/8</td><td><a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=3477813">Encore for Just the Two of Us</a></td><td>In Stock</td></tr>
-<tr><td>2025/12/30</td><td><a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=3399542">A Day Just for Me</a></td><td>Limited</td></tr>
-<tr><td>2025/8/16</td><td><a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=3166814">Princess of the Planet</a></td><td>Available</td></tr>
-<tr><td>2025/6/15</td><td><a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=3035787">Buzz Date Race</a></td><td>Limited</td></tr>
-<tr><td>2025/3/30</td><td><a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2893783">Until We Become Zero</a></td><td>Limited</td></tr>
-<tr><td>2024/12/29</td><td><a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2709069">The Continuation of Goodbye</a></td><td>Sold Out</td></tr>
-<tr><td>2024/10/20</td><td><a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2604565">Hey, My Friend.</a></td><td>Available</td></tr>
-</tbody></table></section>
-<section><h5>Shop</h5><ul><li><a href="#">Melonbooks (Japan)</a></li></ul></section>
-<section><h5>Upcoming Events</h5><ul><li>2026/08/15 Comic Market 108 (East Hall 3, Booth フ04a)</li></ul></section>
-<section><h5>Favorites</h5>
-<details><summary>Uma Musume</summary><p>Favorite: Jungle Pocket<br>Favorite pairing: Jungle Pocket × Agnes Tachyon (OTP)<br>Also likes Fujimasa March and Calstone Light O.<br>I often attend Yumiko Mochizuki's events.</p></details>
-<details><summary>Pretty Series</summary><p>Favorites: Mimi, Manager Naru, Mega-nee (PriChan), Kyoko Asechi<br>Favorite pairing: Naru × Mega-nee</p></details>
-<details><summary>Gyakuten Baribariverse</summary><p>Favorite: Koamin<br>No favorite pairing at the moment.</p></details>
-</section>
-<footer><hr><small>© yasumi</small></footer>
-</main></body></html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>yasumi</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/simple-icons-font@v13/font/simple-icons.min.css"
+    />
+    <style>
+      header img {
+        width: 100%;
+        max-height: 260px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .profile {
+        text-align: center;
+      }
+
+      .language {
+        text-align: right;
+        font-size: 0.85rem;
+      }
+
+      .sns-icons {
+        display: flex;
+        justify-content: center;
+        gap: 1.2rem;
+        margin: 1rem 0;
+      }
+
+      .sns-icons a {
+        font-size: 1.8rem;
+        color: inherit;
+      }
+
+      .sns-icons a:hover {
+        opacity: 0.6;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1rem;
+      }
+
+      .gallery img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .gallery a:hover img {
+        opacity: 0.75;
+      }
+
+      small {
+        color: #4ebdd5;
+      }
+
+      :root {
+        --bg-color: #e5ded6;
+        --text-color: #4ebdd5;
+        --pico-background-color: #e5ded6;
+        --pico-card-background-color: #e5ded6;
+        --pico-muted-border-color: #c9c2a6;
+        --pico-color: #4ebdd5;
+      }
+
+      /* 全体 */
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+      }
+
+      /* リンク */
+
+      a {
+        color: var(--text-color);
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #d94f40;
+      }
+      /* テーブル */
+      table {
+        background: #e5ded6;
+      }
+
+      thead {
+        background: #e8e2c5;
+      }
+
+      tbody tr:nth-child(even) {
+        background: #f9f6ea;
+      }
+
+      /* ヘッダー */
+
+      header img {
+        width: 100%;
+        max-height: 260px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .profile h3 {
+        color: var(--main-color);
+      }
+
+      /* 言語切替 */
+
+      .language a {
+        font-size: 0.85rem;
+      }
+
+      /* SNS */
+
+      .sns-icons a {
+        font-size: 1.8rem;
+        color: #4ebdd5;
+      }
+
+      .sns-icons a:hover {
+        color: var(--main-color);
+      }
+
+      /* 見出し */
+
+      section H5 {
+        color: var(--text-color);
+      }
+
+      /* 作品ギャラリー */
+
+      .gallery {
+        display: grid;
+
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+
+        gap: 1rem;
+      }
+
+      .gallery img {
+        width: 100%;
+
+        aspect-ratio: 1/1;
+
+        object-fit: cover;
+
+        border-radius: 8px;
+
+        transition: 0.2s;
+      }
+
+      .gallery img:hover {
+        transform: translateY(-3px);
+      }
+
+      /* イベント */
+
+      .event-box {
+        background: #e5ded6;
+
+        padding: 1rem;
+
+        border-radius: 10px;
+      }
+
+      footer {
+        color: #80cb80;
+      }
+      summary {
+        color: #fd6b5b;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="language">
+        <a href="../index.html">日本語</a>&nbsp;|&nbsp;<strong>English</strong>
+      </div>
+      <header>
+        <div class="profile">
+          <h3>yasumi</h3>
+          <p>Links to my social media.<br />I am usually active on Bluesky.</p>
+        </div>
+        <nav class="sns-icons">
+          <a href="https://x.com/ysm_flop" aria-label="X"
+            ><i class="si si-x"></i
+          ></a>
+          <a
+            href="https://bsky.app/profile/ysmflop.bsky.social"
+            aria-label="Bluesky"
+            ><i class="si si-bluesky"></i
+          ></a>
+          <a href="https://www.pixiv.net/users/48769" aria-label="Pixiv"
+            ><i class="si si-pixiv"></i
+          ></a>
+          <a href="https://ysmflop.tumblr.com/" aria-label="Tumblr"
+            ><i class="si si-tumblr"></i
+          ></a>
+        </nav>
+      </header>
+      <section>
+        <h5>Books</h5>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Title</th>
+              <th>Stock</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2026/6/28</td>
+              <td>
+                <a
+                  href="https://www.melonbooks.co.jp/detail/detail.php?product_id=3701698"
+                  >Say I'm Cute!</a
+                >
+              </td>
+              <td>In Stock</td>
+            </tr>
+            <tr>
+              <td>2026/2/8</td>
+              <td>
+                <a
+                  href="https://www.melonbooks.co.jp/detail/detail.php?product_id=3477813"
+                  >Encore for Just the Two of Us</a
+                >
+              </td>
+              <td>In Stock</td>
+            </tr>
+            <tr>
+              <td>2025/12/30</td>
+              <td>
+                <a
+                  href="https://www.melonbooks.co.jp/detail/detail.php?product_id=3399542"
+                  >A Day Just for Me</a
+                >
+              </td>
+              <td>Limited</td>
+            </tr>
+            <tr>
+              <td>2025/8/16</td>
+              <td>
+                <a
+                  href="https://www.melonbooks.co.jp/detail/detail.php?product_id=3166814"
+                  >Princess of the Planet</a
+                >
+              </td>
+              <td>Available</td>
+            </tr>
+            <tr>
+              <td>2025/6/15</td>
+              <td>
+                <a
+                  href="https://www.melonbooks.co.jp/detail/detail.php?product_id=3035787"
+                  >Buzz Date Race</a
+                >
+              </td>
+              <td>Limited</td>
+            </tr>
+            <tr>
+              <td>2025/3/30</td>
+              <td>
+                <a
+                  href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2893783"
+                  >Until We Become Zero</a
+                >
+              </td>
+              <td>Limited</td>
+            </tr>
+            <tr>
+              <td>2024/12/29</td>
+              <td>
+                <a
+                  href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2709069"
+                  >The Continuation of Goodbye</a
+                >
+              </td>
+              <td>Sold Out</td>
+            </tr>
+            <tr>
+              <td>2024/10/20</td>
+              <td>
+                <a
+                  href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2604565"
+                  >Hey, My Friend.</a
+                >
+              </td>
+              <td>Available</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h5>Shop</h5>
+        <ul>
+          <li><a href="#">Melonbooks (Japan)</a></li>
+        </ul>
+      </section>
+      <section>
+        <h5>Upcoming Events</h5>
+        <ul>
+          <li>2026/08/15 Comic Market 108 (East Hall 3, Booth フ04a)</li>
+        </ul>
+      </section>
+      <section>
+        <h5>Favorites</h5>
+        <details>
+          <summary>Uma Musume</summary>
+          <p>
+            Favorite: Jungle Pocket<br />Favorite pairing: Jungle Pocket × Agnes
+            Tachyon (OTP)<br />Also likes Fujimasa March and Calstone Light
+            O.<br />I often attend Yumiko Mochizuki's events.
+          </p>
+        </details>
+        <details>
+          <summary>Pretty Series</summary>
+          <p>
+            Favorites: Mimi, Manager Naru, Mega-nee (PriChan), Kyoko Asechi<br />Favorite
+            pairing: Naru × Mega-nee
+          </p>
+        </details>
+        <details>
+          <summary>Gyakuten Bariba Reverse</summary>
+          <p>Favorite: Koamin<br />No favorite pairing at the moment.</p>
+        </details>
+      </section>
+      <footer>
+        <hr />
+        <small>© yasumi</small>
+      </footer>
+    </main>
+  </body>
+</html>
